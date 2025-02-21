@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.ltp</groupId>
 	<artifactId>grade-submission</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>grade-submission</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -38,7 +38,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		
+
+		<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
