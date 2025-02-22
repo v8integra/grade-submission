@@ -28,6 +28,18 @@ public class GradeController {
         return "grades";
     }
 
+    @PostMapping("/handleSubmit")
+    public String submitForm(Grade grade) {
+        int index = getGradeIndex(grade.getId());
+        if (index == Constants.NOT_FOUND) {
+            studentGrades.add(grade);
+        } else {
+            studentGrades.set(index, grade);
+        }
+
+        return "redirect:/grades";
+    }
+
     public int getGradeIndex(String id) {
         for (int i = 0; i < studentGrades.size(); i++) {
             if (studentGrades.get(i).getId().equals(id)) {
